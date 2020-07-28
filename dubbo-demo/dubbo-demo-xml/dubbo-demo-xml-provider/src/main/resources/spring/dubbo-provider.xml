@@ -28,8 +28,9 @@
 
     <dubbo:protocol name="dubbo"/>
 
+    <!-- 配置为 Spring Bean -->
     <bean id="demoService" class="org.apache.dubbo.demo.provider.DemoServiceImpl"/>
-
+    <!-- 作为 Dubbo 服务暴露出去 -->
     <dubbo:service interface="org.apache.dubbo.demo.DemoService" ref="demoService"/>
 
 </beans>
